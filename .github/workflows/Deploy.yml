@@ -26,9 +26,9 @@ jobs:
           set -e
 
           # Go to deployment directory
-          cd /var/www/html/businesslogodesign-dockerkube
+          cd /var/www/html/cicd-own
 
-          git config --global --add safe.directory /var/www/html/businesslogodesign-dockerkube
+          git config --global --add safe.directory /var/www/html/cicd-own
 
           # Save last successful commit
           LAST_COMMIT=$(git rev-parse HEAD)
@@ -43,7 +43,7 @@ jobs:
           }
 
           # Set ownership for Apache
-          sudo chown -R www-data:www-data /var/www/html/businesslogodesign-dockerkube
+          sudo chown -R www-data:www-data /var/www/html/cicd-own
 
           # Optional: restart Apache
           # systemctl restart apache2
